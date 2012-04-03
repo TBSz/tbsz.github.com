@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="zh-cn">
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<meta name="author" content="{{ site.author }}" />
+	<title>{{ page.title }} | {{ site.author }}</title>
+	<!--<link rel="shortcut icon" href="/favicon.ico">-->
+	<link href="{{ site.url }}/feed/" rel="alternate" title="{{ site.author }}" type="application/atom+xml" />
+	<link rel="stylesheet" href="/blog/media/css/style.css">
+	<link href="/blog/media/google-code-prettify/prettify.css" type="text/css" rel="stylesheet" />
+	<link rel="openid.server" href="http://www.myopenid.com/server" />
+	<link rel="openid.delegate" href="http://ddatsh.myopenid.com/" />
+	
+	<script type="text/javascript" src="/blog/media/google-code-prettify/prettify.js"></script>
+	<script type="text/javascript" src="/blog/media/js/jquery-1.7.1.min.js"></script>
+</head>
+<body onload="prettyPrint()">
+<script>
+	function disableSelection(target){
+		  		if(typeof target.onselectstart!="undefined"){target.onselectstart=function(){return false}}
+		  		else if(typeof target.style.MozUserSelect!="undefined"){target.style.MozUserSelect="none"}
+		  		else{target.onmousedown=function(){return false}}
+		  		target.style.cursor="default"
+	 		}
+	disableSelection(document.body);
+</script>
+    <div id="container">
+      <div id="main" role="main">
+		<header>
+        		<h1>{{ page.title }}</h1>
+        	</header>
+		<div class="nav">
+		        <a title="home page" class="" href="{{ site.url }}/">首页</a>
+		        <a title="about" class="" href="{{ site.url }}/about/">关于</a>
+		        <a title="categories" class="" href="{{ site.url }}/categories/">Tags</a>
+		        <a title="subscribe by RSS" class="" href="{{ site.url }}/feed/">订阅</a>
+	        </div>
+	        <div class="content">
+	        	{{ content }}
+	        </div>
+	      </div>
+	</div>
+	<script type="text/javascript">
+	  var _gaq = _gaq || [];
+	  _gaq.push(['_setAccount', 'UA-30498868-1']);
+	  _gaq.push(['_trackPageview']);
+	  (function() {
+	    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+	    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+	    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+	  })();
+	</script>
+</body>
+</html>
